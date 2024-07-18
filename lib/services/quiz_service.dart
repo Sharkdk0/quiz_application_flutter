@@ -1,8 +1,8 @@
+import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../models/quiz_models.dart';
-import 'package:http/http.dart' as http;
 
-Future<List<QuizQuestion>> fetchQuestions() async {
+Future<List<QuizQuestion>> fetchQuizQuestions() async {
   final response = await http.get(Uri.parse(
       'https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple'));
 
